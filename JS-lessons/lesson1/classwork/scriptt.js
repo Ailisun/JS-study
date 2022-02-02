@@ -32,5 +32,5 @@ console.log(v)
 
 let n = 3;
 let m = 4;
-let c = n**2+m**2
+let c = Math.sqrt(n**2+m**2)
 console.log(c)
