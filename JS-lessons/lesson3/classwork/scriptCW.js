@@ -66,20 +66,47 @@
 //     console.log(arr2[i])
 // }
 
-// let i >=0
-// while (i = arr2.length-1) {
-//     console.log(arr[i])
+// let i = arr2.length-1
+// while (i >= 0) {
+//     console.log(arr2[i])
+//     i--
+// }
+// перебрати циклом while та вивести  числа тільки з непарним індексом
+// let i = arr2.length-1
+// while (i >=0 ) {
+//     if (i % 2 !== 0) {
+//         console.log(arr2[i])
+//     }
 //     i--
 // }
 // перебрати циклом for та вивести  числа тільки з непарним індексом
-// let i >=0
-// while (i = arr2.length-1) {
-//     if (arr.length-1 % 2 !== 0) {
-//         console.log(arr[i])
+
+// for (let i = arr2.length-1; i >= 0; i--) {
+//     if (i % 2 !== 0) {
+//         console.log(arr2[i])
+//     }
+// }
+// вивести  числа тільки парні  значення
+// let i = arr2.length-1
+// while ( i >= 0 ) {
+//     if (arr2[i] % 2 === 0) {
+//         console.log(arr2[i])
 //     }
 //     i--
 // }
 
+// for (let i = arr2.length-1; i >= 0; i--) {
+// if (arr2[i] % 2 === 0) {
+// console.log(arr2[i])
+//   }
+// }
+// замінити кожне число кратне 3 на слово "okten"
+// for (let i = arr2.length-1; i >= 0; i--) {
+//  if (arr2[i] % 3 === 0) {
+//     arr2[i] = "okten"
+//  console.log(arr2[i])
+//   }
+//  }
 
 //             Використовуючи данні з масиву, за допомоги document.write та циклу
 //             побудувати структуру по шаблону template1.1
@@ -139,7 +166,7 @@
 // SURNAME - ${simpson.surname}
 // AGE - ${simpson.age}
 // INFO - ${simpson.info}
-// PHOTO - <img src = "&{simpson.photo}" alt="photo"></div>`)
+// PHOTO - <img src = "${simpson.photo}" alt="photo"></div>`)
 //     document.write (`</div>`)
 // }
 
@@ -148,7 +175,7 @@
 //     document.write (`<h2>
 // ${simpson.name} ${simpson.surname}, age is - ${simpson.age}</h2>`)
 //     document.write (`<p> ${simpson.info}</p>`)
-//     document.write ( `<img src="&{simpson.photo}" alt="image">`)
+//     document.write ( `<img src="${simpson.photo}" alt="image">`)
 // }
 // document.write (`</div>`)
 
