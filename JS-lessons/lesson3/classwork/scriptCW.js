@@ -212,3 +212,19 @@
 //     document.write (`</div>`)
 //
 // }
+
+for(let i = 0 ; условие ; i++ ) {
+
+}
+let array = [4, 32, 2, 34, 11, 4, 56, 7, 766, 5];
+
+for (let i = 0; i < array.length / 2; i++) {
+    let temp = array[array.length - i - 1]
+    array[array.length - i - 1] = array[i]
+    array[i] = temp
+}
+
+console.log(array)
+do {
+
+}while (i<0)
