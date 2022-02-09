@@ -20,7 +20,7 @@
 
 // - створити функцію яка приймає три числа та виводить найбільше. (Без Math.max!)
 // function chysla2 (a, b, c) {
-//     let mas = [a, b, c]
+//     let mas = []
 //     let maxvalue = mas[0]
 //     for (i = 1; i < mas.length; i++) {
 //         if (maxvalue < mas[i] ) {
