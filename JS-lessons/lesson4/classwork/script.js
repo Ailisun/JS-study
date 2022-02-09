@@ -93,3 +93,38 @@
 //     return(minvalue)
 // }
 // console.log(chyslaAll([2,6,8]))
+
+// створити функцію яка заповнює масив рандомними числами
+// (цей код генерує рандомні числа в діапазоні від 0 до 100 - Math.round(Math.random()*100)) та виводить його.
+
+// function numberRandom (arrayNumber) {
+//     let mas = []
+//     for (i = 0; i < arrayNumber; i++)
+//         mas.push ( Math.round( Math.random() * 100 ))
+//     return mas
+//
+// }
+//
+// document.write(numberRandom(6))
+// - створити функцію яка заповнює масив рандомними числами в діапазоні від 0 до limit. limit - аргумент, який характеризує кінцеве значення діапазону.
+
+// function numberRandom (arrayNumber,limit) {
+//     let mas = []
+//     for (i = 0; i < arrayNumber; i++)
+//         mas.push ( Math.round( Math.random() * limit ))
+//     return mas
+//
+// }
+//
+// document.write(numberRandom(6,60))
+
+// - Функція приймає масив та робить з нього новий масив в зворотньому порядку. [1,2,3] -> [3, 2, 1].
+// function mas (a,b,c) {
+// let arr = [a,b,c]
+//     for (let i = arr.length-1; i >= 0; i--) {
+//         let newArr = 0
+//        newArr = arr[i]
+//         console.log(newArr)
+//     }
+// }
+// mas(1,2,3)
