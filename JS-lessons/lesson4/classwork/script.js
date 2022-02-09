@@ -122,7 +122,7 @@
 // function mas (a,b,c) {
 // let arr = [a,b,c]
 //     for (let i = arr.length-1; i >= 0; i--) {
-//         let newArr = 0
+//         let newArr = []
 //        newArr = arr[i]
 //         console.log(newArr)
 //     }
