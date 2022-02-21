@@ -4,8 +4,8 @@
 // let addClass = document.getElementById('main_header')
 //     addClass.children.namedItem('xxx')
 // a) додає клас з назвою групи, елементу з ід main_header
-// let addClass = document.getElementById('main_header')
-// addClass.classList.add('xxx')
+let addClass = document.getElementById('main_header')
+addClass.classList.add('dec-2021')
 // b) робить шириниу елементу ul 400px
 // let w400 = document.getElementsByTagName('ul')
 // w400[0].style.width = '400px'
