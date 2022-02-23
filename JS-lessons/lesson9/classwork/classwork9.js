@@ -191,11 +191,13 @@ for (const course of coursesArray) {
         item2.appendChild(document.createTextNode(item));
         lessons.appendChild(item2)
     }
-
+    let wrap = document.createElement('div')
+    wrap.appendChild(lessons)
+    wrap.style.border = '2px solid green'
 
     coursesArray2.appendChild(title)
     coursesArray2.appendChild(time)
-    coursesArray2.appendChild(lessons)
+    coursesArray2.appendChild(wrap)
     document.body.appendChild(coursesArray2)
 
 }
