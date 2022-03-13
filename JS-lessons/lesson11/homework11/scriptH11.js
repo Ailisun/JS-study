@@ -63,7 +63,7 @@ let buttonCar = document.getElementById('buttonCar');
 
 let data = () => {
     let arrCar =[`${model.value}`,`${type.value}`, `${volume.value}`]
-    localStorage.setItem('car_info', arrCar.toString());
+    localStorage.setItem('car_info', JSON.stringify(arrCar))
 }
 buttonCar.onclick = () => {
     data();
