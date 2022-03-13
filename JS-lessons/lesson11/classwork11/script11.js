@@ -12,17 +12,34 @@ let users = [
     {name: 'max', age: 31, status: true}
 ];
 
+// for (const user of users) {
+//     let divUsers = document.createElement('div')
+//     divUsers.classList.add('person')
+//     divUsers.innerText = user.name
+//
+//  let favButton = document.createElement('button')
+// favButton.innerText = 'Add to favorite'
+// divUsers.append(favButton)
+// favButton.onclick = function () {
+//
+//     }
+//
+// document.body.append(divUsers)
+// }
+
+
+// Правильніший варіант
+let userBox = document.getElementById('users')
+let favorites = JSON.parse(localStorage.getItem('favorites'))
 for (const user of users) {
-    let divUsers = document.createElement('div')
-    divUsers.classList.add('person')
-    divUsers.innerText = user.name
-
- let favButton = document.createElement('button')
-favButton.innerText = 'Add to favorite'
-divUsers.append(favButton)
-favButton.onclick = function () {
-
+    let userDiv = document.createElement('div')
+    userDiv.innerText = user.name + ' '
+    let button = document.createElement('button')
+    button.innerText = 'Add'
+    button.onclick = function (e) {
+        favorites.push(user)
+        localStorage.setItem('favorites', JSON.stringify(favorites))
     }
-
-document.body.append(divUsers)
+userDiv.append(button)
+    userBox.append(userDiv)
 }
