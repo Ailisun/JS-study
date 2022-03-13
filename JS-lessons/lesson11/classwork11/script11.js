@@ -11,35 +11,46 @@ let users = [
     {name: 'olya', age: 31, status: false},
     {name: 'max', age: 31, status: true}
 ];
-
+// let userBox = document.getElementById('users')
+// let addBest = []
+//
+//
 // for (const user of users) {
 //     let divUsers = document.createElement('div')
-//     divUsers.classList.add('person')
 //     divUsers.innerText = user.name
 //
-//  let favButton = document.createElement('button')
-// favButton.innerText = 'Add to favorite'
-// divUsers.append(favButton)
-// favButton.onclick = function () {
 //
+//     let favButton = document.createElement('button')
+//     favButton.innerText = 'Add to favorite'
+//     favButton.onclick = function (e) {
+//         addBest.push(user)
+//         localStorage.setItem('bests', JSON.stringify(addBest))
 //     }
 //
-// document.body.append(divUsers)
+//     // let anchor = document.createElement('a')
+//     // anchor.href ='favoritespage.html'
+//     // anchor.innerText = `Follow best members?`?ud=${JSON.stringify(user)}
+//     divUsers.append(favButton)
+//     // userBox.append(divUsers, anchor)
+//     userBox.append(divUsers)
 // }
+// В наступному і попередньому варіанті чогось не знаходить сторінку html, пробувала в другому варіанті робити як нам показували на лекції, але також не йде
 
 
-// Правильніший варіант
-let userBox = document.getElementById('users')
-let favorites = JSON.parse(localStorage.getItem('favorites'))
-for (const user of users) {
-    let userDiv = document.createElement('div')
-    userDiv.innerText = user.name + ' '
-    let button = document.createElement('button')
-    button.innerText = 'Add'
-    button.onclick = function (e) {
-        favorites.push(user)
-        localStorage.setItem('favorites', JSON.stringify(favorites))
-    }
-userDiv.append(button)
-    userBox.append(userDiv)
-}
+
+
+// Правильніший варіант (другий)
+// let userBox = document.getElementById('users')
+// let favorites = JSON.parse(localStorage.getItem('favorites')) || []
+// for (const user of users) {
+//     let userDiv = document.createElement('div')
+//     userDiv.innerText = user.name + ' '
+//     let button = document.createElement('button')
+//     button.innerText = 'Add'
+//     button.onclick = function (e) {
+//         favorites.push(user)
+//         localStorage.setItem('favorites', JSON.stringify(favorites))
+//     }
+// userDiv.append(button)
+//     userBox.append(userDiv)
+// }
