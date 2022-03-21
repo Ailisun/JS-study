@@ -5,7 +5,7 @@
 // https://jsonplaceholder.typicode.com/posts
 
 function getAllPosts () {
-    let result =  fetch('https://jsonplaceholder.typicode.com/posts')
+     fetch('https://jsonplaceholder.typicode.com/posts')
         .then(response => response.json())
         .then(elements => {
             let allItems = document.createElement('div')
@@ -20,7 +20,7 @@ function getAllPosts () {
                 let button = document.createElement('button')
                 button.innerText = 'info'
                 button.addEventListener('click', function () {
-                    let comments = fetch('https://jsonplaceholder.typicode.com/comments?postId=' + element.id)
+                     fetch('https://jsonplaceholder.typicode.com/comments?postId=' + element.id)
                         .then (commentResponse => commentResponse.json())
                         .then ( commentElement => {
                             // console.log(commentElement)
@@ -41,9 +41,7 @@ function getAllPosts () {
 
             }
         })
-    return result
-
-
-
 
 }
+
+getAllPosts ()
