@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<style>
+    .menu ul {
+        margin: 0;
+        list-style: none;
+        padding-left: 20px;
+
+    }
+    .menu.hidden ul{
+        display: none;
+    }
+    .menu .title {
+        padding-left: 20px;
+        font-size: 18px;
+        cursor: pointer;
+        position:relative;
+    }
+
+    .menu .title::before {
+        content: '▶ ';
+        position:absolute;
+        color: green;
+        top:-2px;
+        left:0;
+    }
+
+    .menu.hidden .title::before {
+        content: '▼ ';
+        top:1px;
+    }
+
+
+</style>
+</head>
+
+<body>
+
+<div class="menu dulces">
+    <h3 class="title">Сладости (нажми меня)!</h3>
+    <ul>
+        <li>Торт</li>
+        <li>Пончик</li>
+        <li>Пирожное</li>
+    </ul>
+
+</div>
+
+<script>
+    /*let ulElemenet = document.getElementsByClassName("dulces");
+    let titleElement = document.getElementsByClassName("title");
+    titleElement.onclick = function(){
+      ulElemenet.classList.toggle("hidden");
+    }*/
+    let menuElement = document.querySelector('.dulces');
+    let titleElement = menuElement.querySelector('.title');
+
+    titleElement.onclick = function() {
+        menuElement.classList.toggle('hidden');
+    };
+</script>
+</body>
+</html>
