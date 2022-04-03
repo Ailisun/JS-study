@@ -27,7 +27,14 @@
 </head>
 
 <body>
-
+<form  target="_blank" id="form1">
+    <input type="text">
+    <input type="submit">
+</form>
+<form target="_blank" id="form2">
+    <input type="text">
+    <input type="submit">
+</form>
 <div class="menu dulces">
     <h3 class="title">Сладости (нажми меня)!</h3>
     <ul>
@@ -44,12 +51,12 @@
     // titleElement.onclick = function(){
     //   ulElemenet.classList.toggle("hidden");
     // }
-    let menuElement = document.querySelector('.dulces');
-    let titleElement = menuElement.querySelector('.title');
-
-    titleElement.onclick = function() {
-        menuElement.classList.toggle('hidden');
-    };
+    // let menuElement = document.querySelector('.dulces');
+    // let titleElement = menuElement.querySelector('.title');
+    //
+    // titleElement.onclick = function() {
+    //     menuElement.classList.toggle('hidden');
+    // };
 
 
 
@@ -80,6 +87,13 @@
     //     divFather.append(div, hr);
     // }
     // document.body.appendChild(divFather)
+
+
+        function myFunction() {
+        setTimeout(function(){ document.getElementById("form1").submit();}, 3000);
+        setTimeout(function(){ document.getElementById("form2").submit();}, 6000);
+    }
+
 </script>
 </body>
 </html>
