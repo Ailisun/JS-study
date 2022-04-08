@@ -5,19 +5,75 @@
     <title>User-Details Page</title>
     <style>
         .user-details {
-            background: #bdfdfd;
+            background: #e4d3fc;
+            width: 85%;
+            max-width: 600px;
+            margin: auto;
+            margin-top: 25px;
+            margin-bottom: 25px;
+            box-sizing: border-box;
+            padding: 20px;
+            border-radius: 10px;
+            border: 4px solid rgba(165, 59, 185, 0.76);
+            box-shadow: 0 1px 2px 0 rgba(44,47,60,0.06), 0 3px 10px 0 rgba(44,47,60,0.09);
         }
+        .postDetailsButton {
+            width: 85%;
+            height: 30px;
+            margin: 0 auto;
+            display: block;
+         background: rgba(165, 59, 185, 0.76);
+            cursor: pointer;
+            border-radius: 3px;
+
+        }
+        .posts {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .post {
+            background: rgb(187, 149, 225);
+            margin: 10px;
+            width: 200px;
+            margin-left: calc(10% - 100px);
+            margin-right: calc(10% - 100px);
+        }
+
+
     </style>
 </head>
 <body>
 <div class="user-details"></div>
+<button class="postDetailsButton">Post Details</button>
+<div class="posts"></div>
 
 <script>
     let url = new URL(location.href)
     console.log(url)
     let user = JSON.parse(url.searchParams.get('data'))
     let userDetailsContainer = document.getElementsByClassName('user-details')[0]
+    let postsContainer = document.getElementsByClassName('posts')[0]
+    let postsDetailsButton = document.getElementsByClassName('postDetailsButton')[0]
     userDetailsContainer.innerText = `${JSON.stringify(user)}`
+    postsDetailsButton.onclick = function () {
+        fetch(`https://jsonplaceholder.typicode.com/users/${user.id}/posts`)
+            .then(value => value.json())
+            .then (value => {
+                for (const postItem of value) {
+                    let postContainer = document.createElement('div')
+                    postContainer.classList.add('post')
+                    postContainer.innerText = postItem.title
+                    let postDetailsButton = document.createElement('button')
+                    postDetailsButton.innerText = 'More information'
+                    postDetailsButton.onclick = function () {
+                        location.href = '/post-details.html'
+                    }
+                    postContainer.appendChild(postDetailsButton)
+                    postsContainer.append(postContainer)
+                }
+            })
+    }
+userDetailsContainer.appendChild(postsDetailsButton)
 </script>
 
 </body>
