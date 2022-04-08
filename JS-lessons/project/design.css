@@ -9,8 +9,8 @@
     width: 200px;
     height: 100px;
     margin: 10px;
-    margin-left: calc(25% - 100px);
-    margin-right: calc(25%- 100px);
+    margin-left: calc(25% - 50px);
+    margin-right: calc(25%- 50px);
     box-shadow: -10px 7px 17px -10px rgb(34 60 80 / 20%), -8px -8px 5px -8px rgb(34 60 80 / 20%);
     border-radius: 6px;
     cursor: pointer;
@@ -22,4 +22,39 @@
 
 a {
     color: #fd54a5;
+}
+
+.user-details {
+    background: #e4d3fc;
+    width: 85%;
+    max-width: 600px;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 10px;
+    border: 4px solid rgba(165, 59, 185, 0.76);
+    box-shadow: 0 1px 2px 0 rgba(44,47,60,0.06), 0 3px 10px 0 rgba(44,47,60,0.09);
+}
+.postDetailsButton {
+    width: 85%;
+    height: 30px;
+    margin: 0 auto;
+    display: block;
+    background: rgba(165, 59, 185, 0.76);
+    cursor: pointer;
+    border-radius: 3px;
+
+}
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+}
+.post {
+    background: rgb(187, 149, 225);
+    margin: 10px;
+    width: 200px;
+    margin-left: calc(10% - 100px);
+    margin-right: calc(10% - 100px);
 }

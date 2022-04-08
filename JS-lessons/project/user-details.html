@@ -3,44 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>User-Details Page</title>
-    <style>
-        .user-details {
-            background: #e4d3fc;
-            width: 85%;
-            max-width: 600px;
-            margin: auto;
-            margin-top: 25px;
-            margin-bottom: 25px;
-            box-sizing: border-box;
-            padding: 20px;
-            border-radius: 10px;
-            border: 4px solid rgba(165, 59, 185, 0.76);
-            box-shadow: 0 1px 2px 0 rgba(44,47,60,0.06), 0 3px 10px 0 rgba(44,47,60,0.09);
-        }
-        .postDetailsButton {
-            width: 85%;
-            height: 30px;
-            margin: 0 auto;
-            display: block;
-         background: rgba(165, 59, 185, 0.76);
-            cursor: pointer;
-            border-radius: 3px;
-
-        }
-        .posts {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .post {
-            background: rgb(187, 149, 225);
-            margin: 10px;
-            width: 200px;
-            margin-left: calc(10% - 100px);
-            margin-right: calc(10% - 100px);
-        }
-
-
-    </style>
+    <link rel="stylesheet" href="design.css">
 </head>
 <body>
 <div class="user-details"></div>
@@ -66,7 +29,7 @@
                     let postDetailsButton = document.createElement('button')
                     postDetailsButton.innerText = 'More information'
                     postDetailsButton.onclick = function () {
-                        location.href = '/post-details.html'
+                        location.href = './post-details.html'
                     }
                     postContainer.appendChild(postDetailsButton)
                     postsContainer.append(postContainer)
