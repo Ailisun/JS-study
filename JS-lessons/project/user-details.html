@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User-Details Page</title>
+    <style>
+        .user-details {
+            background: #bdfdfd;
+        }
+    </style>
+</head>
+<body>
+<div class="user-details"></div>
+
+<script>
+    let url = new URL(location.href)
+    console.log(url)
+    let user = JSON.parse(url.searchParams.get('data'))
+    let userDetailsContainer = document.getElementsByClassName('user-details')[0]
+    userDetailsContainer.innerText = `${JSON.stringify(user)}`
+
+</script>
+
+</body>
+</html>
