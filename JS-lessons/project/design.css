@@ -31,7 +31,7 @@ a {
     max-width: 600px;
     margin: auto;
     margin-top: 25px;
-    margin-bottom: 25px;rgb
+    margin-bottom: 25px;
     box-sizing: border-box;
     padding: 20px;
     border-radius: 10px;
@@ -67,17 +67,35 @@ a {
     border-radius: 10px;
     border: 4px solid rgba(214, 141, 229, 0.76);
 }
+
+button{
+    background: rgb(206, 136, 229);
+    height: 30px;
+    cursor: pointer;
+    border-radius: 3px;
+}
 .postAdd {
-    background: #e4d3fc;
+    background: #e5ffe5;
+    box-shadow: -10px 7px 17px -10px rgb(34 60 80 / 20%), -8px -8px 5px -8px rgb(34 60 80 / 20%);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    justify-content: center;
 }
 .comments {
-    background: #bb95e1;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
 .comments > li {
-    max-width: 200px;
-    background: #e4d3fc;
+    max-width: 250px;
+    background: #ff77b8;
     margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: -10px 7px 17px -10px rgba(165, 59, 185, 0.76), -8px -8px 5px -8px rgb(137, 137, 210);
 }
